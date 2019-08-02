@@ -12,8 +12,11 @@ const Product = (props) => {
         const items = [];
         products.forEach((product, i) => {
             items.push(
-                <tr key={product.name + i}>
-                    <td className={!product.stocked ? "out-of-stock" : null}>{product.name}</td>
+                <tr key={product.name + i} className={(props.isChecked && !product.stocked) ? "hide" : "show"}>
+                    <td 
+                        className={ !product.stocked ? "out-of-stock" : null }>
+                        {product.name}
+                    </td>
                     <td>{product.price}</td>
                 </tr>
             )

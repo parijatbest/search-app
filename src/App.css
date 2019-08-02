@@ -12,6 +12,24 @@
   text-align: center;
   font-weight: bold;
 }
+
 .App table .out-of-stock {
   color: #ff0000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App table tr.show {
+  opacity: 1;
+  transition: opacity 1.3s linear;
+  
+}
+
+.App table tr.hide {
+  visibility: hidden;
+  margin-top: -10000px;
+  position: absolute;
+  opacity: 0;
 }
